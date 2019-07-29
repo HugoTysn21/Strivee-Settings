@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="10dp"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:id="@+id/timer_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/rounds_nb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="130sp"
+                android:textColor="@color/smoothGreen"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="130sp"
+                android:textColor="@color/smoothRed"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/main_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="230dp"
+            android:background="#202020"
+            android:layout_centerInParent="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="#202020"
+                android:layout_centerInParent="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <LinearLayout
+                        android:id="@+id/timer_rounds"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:backgroundTint="@color/colorPrimary">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Rounds"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/button_moins_rounds"
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@mipmap/minus_round"/>
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:background="@drawable/corner_edit"
+                                android:layout_gravity="center">
+
+                                <TextView
+                                    android:id="@+id/edit_rounds"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="22dp"
+                                    android:text="8"
+                                    android:layout_centerInParent="true"
+                                    android:textAlignment="center"
+                                    android:background="@color/black"/>
+
+                            </RelativeLayout>
+
+
+                            <ImageView
+                                android:id="@+id/button_plus_rounds"
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@mipmap/plus_round" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/timer_works"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Time Works"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"
+                            android:gravity="center"/>
+
+
+                        <Switch
+                            android:id="@+id/work_switch1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Time Cap"
+                            android:textColor="@color/white"
+                            android:gravity="center"/>
+
+                        <LinearLayout
+                            android:id="@+id/time_works_fortime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/button_moins_works"
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@mipmap/minus_round"/>
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/corner_edit">
+
+                                <TextView
+                                    android:id="@+id/edit_works"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="22dp"
+                                    android:text="00:20"
+                                    android:textAlignment="center"
+                                    android:layout_centerInParent="true"
+                                    android:background="@color/black"/>
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/button_plus_works"
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@mipmap/plus_round" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/timer_break"
+                        android:layout_width="0dp"
+                        android:layout_marginRight="10dp"
+                        android:orientation="vertical"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Time Breaks"
+                            android:gravity="center"
+                            android:textColor="@color/white"
+                            android:textSize="22dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/button_moins_break"
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@mipmap/minus_round"/>
+
+                            <RelativeLayout
+                                android:layout_width="80dp"
+                                android:layout_height="40dp"
+                                android:layout_gravity="center"
+                                android:background="@drawable/corner_edit">
+
+                                <TextView
+                                    android:id="@+id/edit_breaks"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white"
+                                    android:textSize="22dp"
+                                    android:text="00:10"
+                                    android:layout_centerInParent="true"
+                                    android:textAlignment="center" />
+
+                            </RelativeLayout>
+
+                            <ImageView
+                                android:id="@+id/button_plus_break"
+                                android:layout_width="25dp"
+                                android:layout_height="55dp"
+                                android:layout_marginEnd="5dp"
+                                android:layout_marginStart="5dp"
+                                android:src="@mipmap/plus_round" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/launch_timer"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/radius"
+                    android:text="Launch"
+                    android:textSize="22dp"
+                    android:textColor="@color/white" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
