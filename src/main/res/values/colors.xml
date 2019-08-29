@@ -7,4 +7,6 @@
     <color name="smoothRed">#E24037</color>
     <color name="smoothGreen">#00FF52</color>
     <color name="white">#FFFFFF</color>
+    <color name="gray">#FFB17979</color>
+    <color name="smoothPink">#FFE66159</color>
 </resources>
